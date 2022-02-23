@@ -1,3 +1,3 @@
 # ipbb-tangerang
 
-A first my Flutter project.
+A redesign app from [iPBB Tangerang](https://play.google.com/store/apps/details?id=com.opensipkd.ipbb_tgr&hl=en&gl=US)
