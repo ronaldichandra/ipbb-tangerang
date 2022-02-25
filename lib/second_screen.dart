@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ipbb/api/api.dart';
 import 'package:ipbb/third_screen.dart';
 
 class Screen extends StatefulWidget {
@@ -12,22 +11,6 @@ class Screen extends StatefulWidget {
 
 class _ScreenState extends State<Screen> {
   TextEditingController _nop = TextEditingController();
-  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-  String _jsonContent = "";
-
-  Future _loadData(String nop) async {
-    String jsonString = await rootBundle.loadString('assets/data.json');
-    final jsonData = json.decode(jsonString);
-
-    NOP nop = NOP.fromJSON(jsonData);
-    Map data = {'nop': nop};
-    setState(() {
-      Navigator.push(context, MaterialPageRoute(builder: ((context) {
-        return Third();
-      })));
-      // sample.name => you can access field from class model
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,9 +51,6 @@ class _ScreenState extends State<Screen> {
               Container(
                 padding: EdgeInsets.only(top: 16),
                 child: TextFormField(
-                  onSaved: (String? nop) {},
-                  validator: (value) =>
-                      value == null || value.isEmpty ? 'Masukkan NOP' : null,
                   controller: _nop,
                   decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
@@ -102,7 +82,10 @@ class _ScreenState extends State<Screen> {
                           fontSize: 18),
                     ),
                     onPressed: () {
-                      _loadData(_nop.text);
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: ((context) {
+                        return Third();
+                      })));
                     },
                   ),
                 ),

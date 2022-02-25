@@ -37,6 +37,7 @@ dependencies:
   flutter_lints: ^1.0.0
   flutter_svg: ^1.0.3
   shared_preferences:
+  expandable:
 
 dev_dependencies:
   flutter_test:
