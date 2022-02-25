@@ -4,7 +4,7 @@
 ## Currently using local API
 
 
-## [Download here](https://github.com/ronaldichandra/ipbb-tangerang/releases/download/1.1.1/app-release.apk)
+## 👉[Download here](https://github.com/ronaldichandra/ipbb-tangerang/releases/download/1.1.1/app-release.apk) - v1.1.1 beta
 
 TODO: Can validate the NOP to API
 
