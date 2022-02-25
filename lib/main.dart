@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'second_screen.dart';
 
-void main(List<String> args) => runApp(MyApp());
+int? initScreen;
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  initScreen = await prefs.getInt("initScreen");
+  await prefs.setInt("initScreen", 1);
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -9,9 +17,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: initScreen == 0 || initScreen == null ? 'first' : '/',
+      routes: {'/': (context) => Screen(), 'first': (context) => FirstScreen()},
       theme: ThemeData(
           fontFamily: 'Montserrat', scaffoldBackgroundColor: Colors.white),
-      home: FirstScreen(),
     );
   }
 }
