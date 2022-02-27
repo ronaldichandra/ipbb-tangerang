@@ -9,4 +9,9 @@
 TODO: Can validate the NOP to API
 
 <br>
-<img src="https://raw.githubusercontent.com/ronaldichandra/ipbb-tangerang/main/screenshots/1.png" width="200"> <img src="https://raw.githubusercontent.com/ronaldichandra/ipbb-tangerang/main/screenshots/2.png" width="200"> <img src="https://raw.githubusercontent.com/ronaldichandra/ipbb-tangerang/main/screenshots/3.png" width="200">
+<p float="left">
+  <img src="https://raw.githubusercontent.com/ronaldichandra/ipbb-tangerang/main/screenshots/1.png" width="200">
+  <img src="https://raw.githubusercontent.com/ronaldichandra/ipbb-tangerang/main/screenshots/2.png" width="200">
+  <img src="https://raw.githubusercontent.com/ronaldichandra/ipbb-tangerang/main/screenshots/3.png" width="200">
+</p>
+
